@@ -7,4 +7,4 @@ app.all '*', (req, res, next) ->
     next()
 
 app.listen port, ->
-  console.log 'Server listening on port #{port}!'
+  console.log "Server is listening on port #{port}"
