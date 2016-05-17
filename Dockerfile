@@ -6,15 +6,11 @@ MAINTAINER Birkhoff Lee <birkhoff.lee.cn@gmail.com>
 WORKDIR ~
 RUN apt-get update; \
     apt-get upgrade -y; \
-    apt-get install ca-certificates openssh-server nodejs-legacy npm git -y --no-install-recommends; \
-    apt-get purge landscape-client landscape-common; \
+    apt-get install ca-certificates nodejs-legacy npm git -y -q --no-install-recommends; \
     apt-get clean; \
     apt-get autoclean; \
     apt-get autoremove; \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*; \
-    echo "" > /etc/legal; \
-    mkdir ~/.ssh; \
-    touch ~/.ssh/authorized_keys
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # SSL Certificate Installation
 WORKDIR /usr/ssl/certs
@@ -36,4 +32,8 @@ WORKDIR /var/www/blogRedirect
 RUN npm i
 
 # Ports
-EXPOSE 80 443 22/udp
+EXPOSE 1827
+
+# Run
+WORKDIR /var/www/blogRedirect
+CMD forever start -c coffee index.coffee
