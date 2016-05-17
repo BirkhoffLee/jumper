@@ -36,4 +36,4 @@ EXPOSE 1827
 
 # Run
 WORKDIR /var/www/blogRedirect
-CMD forever start -c coffee index.coffee
+CMD forever start -c coffee index.coffee && bash
