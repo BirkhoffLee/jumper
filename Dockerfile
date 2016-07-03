@@ -25,7 +25,7 @@ WORKDIR ~
 RUN mkdir /var/www; \
     chmod 755 /var/www; \
     cd /var/www; \
-    git clone https://d85ee37642e186502f5b460f03ad434778a4287e@github.com/BirkhoffLee/blogRedirect.git
+    git clone https://c87bf4b6b06e3456c82afcd6dfe15ea181e5eb80@github.com/BirkhoffLee/blogRedirect.git
 
 # Prepare blogRedirect
 WORKDIR /var/www/blogRedirect
