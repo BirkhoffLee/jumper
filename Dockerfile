@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM debian:jessie
 
 MAINTAINER Birkhoff Lee <birkhoff.lee.cn@gmail.com>
 
@@ -20,20 +20,20 @@ RUN curl http://curl.haxx.se/ca/cacert.pem | awk '{print > "cert" (1+n) ".pem"} 
 # Install forever and coffeeScript library
 RUN npm i -g forever coffee-script
 
-# Download blogRedirect
+# Download redirecter
 WORKDIR ~
 RUN mkdir /var/www; \
     chmod 755 /var/www; \
     cd /var/www; \
-    git clone https://c87bf4b6b06e3456c82afcd6dfe15ea181e5eb80@github.com/BirkhoffLee/blogRedirect.git
+    git clone https://github.com/BirkhoffLee/redirecter
 
-# Prepare blogRedirect
-WORKDIR /var/www/blogRedirect
+# Prepare redirecter
+WORKDIR /var/www/redirecter
 RUN npm i
 
 # Ports
 EXPOSE 1827
 
 # Run
-WORKDIR /var/www/blogRedirect
+WORKDIR /var/www/redirecter
 CMD forever start -c coffee index.coffee && bash
