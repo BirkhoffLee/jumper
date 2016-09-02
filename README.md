@@ -15,4 +15,4 @@ $ docker run -itd -e VIRTUAL_HOST=domain_1(,domain_2...) -e "redirectTo=destinat
 ```
 
 # Why "blogredirect"?
-This repo was used for my personal use for redirecting `www.birkhoff.me` and `birkhoff.me` to `https://blog.birkhoff.me`, but I think others would need this too, so I open-sourced this!
+This repo was used for my personal use for redirecting `www.birkhoff.me` and `birkhoff.me` to `https://blog.birkhoff.me`, so the name was "blogredirect".
