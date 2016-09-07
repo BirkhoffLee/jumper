@@ -1,4 +1,4 @@
-# BirkhoffLee/redirecter
+# BirkhoffLee/redirecter [![](https://images.microbadger.com/badges/image/birkhofflee/blogredirect.svg)](https://microbadger.com/images/birkhofflee/blogredirect)
 A docker image for redirecting from a (list of) domain(s) to an another URL.
 
 # Usage
