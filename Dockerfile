@@ -1,6 +1,6 @@
 FROM debian:jessie
 
-MAINTAINER Birkhoff Lee <birkhoff.lee.cn@gmail.com>
+MAINTAINER Birkhoff Lee <admin@birkhoff.me>
 
 # Set the environment up
 WORKDIR ~
@@ -36,4 +36,4 @@ EXPOSE 1827
 
 # Run
 WORKDIR /var/www/redirecter
-CMD forever start -c coffee index.coffee && bash
+CMD /bin/bash -c "forever start -c coffee index.coffee &> /dev/null && forever logs -f 0"
