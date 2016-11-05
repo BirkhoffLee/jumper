@@ -10,7 +10,8 @@ RUN echo "deb http://deb.debian.org/debian jessie main" > /etc/apt/sources.list;
     apt-get clean; \
     apt-get autoclean; \
     apt-get autoremove; \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*; \
+    export NODE_ENV=production
 
 # Install Forever and CoffeeScript
 RUN npm i -g forever coffee-script
