@@ -1,4 +1,4 @@
-# BirkhoffLee/jumper [![](https://images.microbadger.com/badges/image/birkhofflee/blogredirect.svg)](https://microbadger.com/images/birkhofflee/blogredirect)
+# BirkhoffLee/jumper [![](https://images.microbadger.com/badges/image/birkhofflee/jumper.svg)](https://microbadger.com/images/birkhofflee/jumper)
 A light, useful and fast Docker image for making a domain (or multiple domains!) redirect to an URL.
 
 # Usage
