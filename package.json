@@ -1,12 +1,12 @@
 {
-  "name": "redirecter",
-  "version": "1.0.0",
-  "description": "A docker image for redirecting from a (list of) domain(s) to an another URL.",
+  "name": "jumper",
+  "version": "1.1.0",
+  "description": "A light, useful and fast Docker image for making a domain (or multiple domains!) redirect to an URL.",
   "main": "index.coffee",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Birkhoff Lee <birkhoff.lee.cn@gmail.com>",
+  "author": "Birkhoff Lee <admin@birkhoff.me>",
   "license": "MIT",
   "dependencies": {
     "express": "^4.13.4"
