@@ -9,8 +9,8 @@ RUN echo "deb http://deb.debian.org/debian jessie main" > /etc/apt/sources.list;
     apt-get install unzip -y -q --no-install-recommends; \
     apt-get clean; \
     apt-get autoclean; \
-    apt-get autoremove; \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*; \
+    apt-get autoremove -y; \
+    rm -rf /var/lib/{apt,dpkg,cache,log}/ /tmp/* /var/tmp/*; \
     export NODE_ENV=production
 
 # Install Forever and CoffeeScript
