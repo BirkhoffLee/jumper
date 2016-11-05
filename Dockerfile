@@ -10,6 +10,7 @@ RUN echo "deb http://deb.debian.org/debian jessie main" > /etc/apt/sources.list;
     apt-get clean; \
     apt-get autoclean; \
     apt-get autoremove -y; \
+    apt-get remove --purge -y $BUILD_PACKAGES $(apt-mark showauto); \
     rm -rf /var/lib/{apt,dpkg,cache,log}/ /tmp/* /var/tmp/*; \
     export NODE_ENV=production
 
