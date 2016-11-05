@@ -6,7 +6,7 @@ MAINTAINER Birkhoff Lee <admin@birkhoff.me>
 WORKDIR ~
 RUN echo "deb http://deb.debian.org/debian jessie main" > /etc/apt/sources.list; \
     apt-get update; \
-    apt-get install unzip -y -q --no-install-recommends; \
+    apt-get install unzip wget -y -q --no-install-recommends; \
     apt-get clean; \
     apt-get autoclean; \
     apt-get autoremove -y; \
