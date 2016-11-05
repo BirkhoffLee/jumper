@@ -20,20 +20,20 @@ RUN curl http://curl.haxx.se/ca/cacert.pem | awk '{print > "cert" (1+n) ".pem"} 
 # Install forever and coffeeScript library
 RUN npm i -g forever coffee-script
 
-# Download redirecter
+# Download jumper
 WORKDIR ~
 RUN mkdir /var/www; \
     chmod 755 /var/www; \
     cd /var/www; \
-    git clone https://github.com/BirkhoffLee/redirecter
+    git clone https://github.com/BirkhoffLee/jumper
 
-# Prepare redirecter
-WORKDIR /var/www/redirecter
+# Prepare jumper
+WORKDIR /var/www/jumper
 RUN npm i
 
 # Ports
 EXPOSE 1827
 
 # Run
-WORKDIR /var/www/redirecter
+WORKDIR /var/www/jumper
 CMD /bin/bash -c "forever start -c coffee index.coffee &> /dev/null && forever logs -f 0"
