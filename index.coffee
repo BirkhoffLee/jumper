@@ -1,18 +1,17 @@
 port    = 1827
 express = require 'express'
 app     = express()
-redirectTo = ""
+targetURL = ""
 
-if !process.env.redirectTo
-    console.log "Environment variable not given: redirectTo"
+if !process.env.jumper_destination_url
+    console.error "Environment variable not set: jumper_destination_url"
     process.exit -1
 else
-    redirectTo = process.env.redirectTo
+    targetURL = process.env.jumper_destination_url
 
 app.all '*', (req, res, next) ->
-    console.log "Redirect"
-    res.redirect redirectTo
+    res.redirect targetURL
     next()
 
 app.listen port, ->
-    console.log "Server is listening on port #{port}, set to be redirected to #{redirectTo}"
+    console.log "Server is listening on port #{port}, set to be jumping to #{redirectTo}"
