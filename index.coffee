@@ -14,4 +14,4 @@ app.all '*', (req, res, next) ->
     next()
 
 app.listen port, ->
-    console.log "Server is listening on port #{port}, set to be jumping to #{redirectTo}"
+    console.log "Server is listening on port #{port}, set to be jumping to #{jumper_destination_url}"
