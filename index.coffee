@@ -10,14 +10,14 @@ if !process.env.jumper_destination_url
 else
     targetURL = process.env.jumper_destination_url
 
-if targetURL.slice(-1, 1) == "\\"
+if targetURL.slice(-1) == "\\"
     targetURL = targetURL.slice(0, -1) + "/"
 
 if targetURL.slice(-1, 1) != "/"
     targetURL += "/"
 
 app.all '*', (req, res, next) ->
-    path = (forwardPath) ? req.path : ""
+    path = if forwardPath then req.path else ""
     res.redirect 301, targetURL + path
     next()
 
