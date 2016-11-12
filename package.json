@@ -2,7 +2,7 @@
   "name": "jumper",
   "version": "1.1.0",
   "description": "A light, useful and fast Docker image for making a domain (or multiple domains!) redirect to an URL.",
-  "main": "index.coffee",
+  "main": "src/index.coffee",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
