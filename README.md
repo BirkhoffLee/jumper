@@ -5,7 +5,7 @@ A light, useful and fast Docker image for making a domain (or multiple domains!)
 I usually run a website on Docker with [jwilder/nginx-proxy](https://github.com/jwilder/nginx-proxy), and I recommend you to use it too. So simply run the following to launch Jumper:
 ```
 $ docker run -d -p 80:80 -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy
-$ docker run -itd -P -e "VIRTUAL_HOST=YOUR_DOMAIN" -e "jumper_destination_url=DESTINATION_URL" birkhofflee/jumper
+$ docker run -itd -P -e "VIRTUAL_HOST=DOMAIN_1(,DOMAIN_2,...)" -e "jumper_destination_url=DESTINATION_URL" birkhofflee/jumper
 ```
 
 In addition, if you wish Jumper to forward paths (like "http://from.birkhoff.me/abcd" to "http://dest.birkhoff.me/abcd"), add `-e "jumper_forward_path=true"` after your `-e "jumper_destination_url=DESTINATION_URL"`.
