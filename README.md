@@ -10,6 +10,8 @@ $ docker run -itd -P -e "VIRTUAL_HOST=DOMAIN_1(,DOMAIN_2,...)" -e "jumper_destin
 
 In addition, if you wish Jumper to forward paths (like "http://from.birkhoff.me/abcd" to "http://dest.birkhoff.me/abcd"), add `-e "jumper_forward_path=true"` after your `-e "jumper_destination_url=DESTINATION_URL"`.
 
+For wildcard hosts please check this out: https://github.com/jwilder/nginx-proxy/blob/master/README.md#wildcard-hosts
+
 # Contributing
 Only one rule: **Test before submitting a pull request**.
 
