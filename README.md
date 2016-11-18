@@ -1,7 +1,7 @@
 # BirkhoffLee/jumper [![](https://img.shields.io/badge/Docker%20Hub-BirkhoffLee%2Fjumper-blue.svg)](https://hub.docker.com/r/birkhofflee/jumper/) [![](https://images.microbadger.com/badges/image/birkhofflee/jumper.svg)](https://microbadger.com/images/birkhofflee/jumper) ![Docker Stars](https://img.shields.io/docker/stars/birkhofflee/jumper.svg) ![Docker Pulls](https://img.shields.io/docker/pulls/birkhofflee/jumper.svg)
 A light, useful and fast Docker image for making a domain (or multiple domains!) redirect to an URL.
 
-# Usage
+# Deployment
 I usually run a website on Docker with [jwilder/nginx-proxy](https://github.com/jwilder/nginx-proxy), and I recommend you to use it too. So simply run the following to launch Jumper:
 ```
 $ docker run -d -p 80:80 -v /var/run/docker.sock:/tmp/docker.sock:ro jwilder/nginx-proxy
